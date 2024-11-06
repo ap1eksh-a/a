@@ -1,0 +1,4 @@
+javac B1.java
+javac -h . -classpath . B1.java
+g++ -shared -FPIC -I/usr/lib/jvm/java-1.11.0-openjdk-amd64/include -I/usr/lib/jvm/java-1.11.0-openjdk-amd64/include/linux B1.cpp -o libB1.so
+java -Djava.library.path=. B1
